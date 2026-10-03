@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>YouTube Standard Player</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main>
+      <div class="heading">
+        <span class="youtube-mark" aria-hidden="true">&#9654;</span>
+        <div>
+          <h1>Standard player</h1>
+          <p>Keep watch pages at 16:9</p>
+        </div>
+      </div>
+
+      <label class="setting">
+        <span>Enable on YouTube</span>
+        <input id="enabled" type="checkbox">
+        <span class="switch" aria-hidden="true"></span>
+      </label>
+
+      <p class="note">Portrait videos stay centered with plain black side bars. Theater and full-screen modes are unchanged.</p>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>

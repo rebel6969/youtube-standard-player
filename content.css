@@ -1,0 +1,63 @@
+/* Match the geometry YouTube uses for an ordinary landscape upload. */
+html.yt-standard-player-enabled ytd-watch-flexy:not([theater]) {
+  --ytd-watch-flexy-width-ratio: 16 !important;
+  --ytd-watch-flexy-height-ratio: 9 !important;
+}
+
+/* YouTube reserves 35% of its layout basis for portrait recommendations,
+ * versus 27.5% for landscape. Keep its responsive calculation and minimum
+ * width, but convert the portrait allocation to the landscape allocation.
+ * Changing only the video's aspect ratio does not change this column.
+ */
+html.yt-standard-player-enabled ytd-watch-flexy[is-two-columns_][is-vertical-video_]:not([theater]):not([full-bleed-player]) {
+  --ytd-watch-flexy-non-player-width: calc(var(--ytd-watch-flexy-sidebar-width) * 11 / 14 + var(--ytd-watch-flexy-horizontal-page-margin) * 3) !important;
+}
+
+html.yt-standard-player-enabled ytd-watch-flexy[is-two-columns_][is-vertical-video_]:not([theater]):not([full-bleed-player]) #secondary.ytd-watch-flexy {
+  width: calc(var(--ytd-watch-flexy-sidebar-width) * 11 / 14) !important;
+}
+
+html.yt-standard-player-enabled ytd-watch-flexy:not([theater]) #player {
+  position: relative !important;
+  width: 100% !important;
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  aspect-ratio: 16 / 9 !important;
+}
+
+html.yt-standard-player-enabled ytd-watch-flexy:not([theater]) #player-container-outer,
+html.yt-standard-player-enabled ytd-watch-flexy:not([theater]) #player-container-inner,
+html.yt-standard-player-enabled ytd-watch-flexy:not([theater]) #player-container {
+  position: absolute !important;
+  inset: 0 !important;
+  box-sizing: border-box !important;
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  padding: 0 !important;
+}
+
+html.yt-standard-player-enabled ytd-watch-flexy:not([theater]) #movie_player {
+  position: relative !important;
+  isolation: isolate !important;
+  overflow: hidden !important;
+  width: 100% !important;
+  height: 100% !important;
+  background: #000 !important;
+}
+
+html.yt-standard-player-enabled ytd-watch-flexy:not([theater]) #movie_player .html5-video-container {
+  position: relative !important;
+  width: 100% !important;
+  height: 100% !important;
+  background: #000 !important;
+}
+
+html.yt-standard-player-enabled ytd-watch-flexy:not([theater]) #movie_player video.html5-main-video {
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+}
