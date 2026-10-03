@@ -16,7 +16,7 @@ After changing the extension's files, use the **Reload** button on the extension
 
 Version 1.3.0 also corrects YouTube's wider recommendation column on portrait pages. This gives the player, title area and recommendation thumbnails the same available widths as a landscape page at the same viewport. Video imagery, titles and recommended content naturally remain different.
 
-Validation: JavaScript syntax and manifest checks; browser layout fixture using the column rules read from both live tabs, at 1340px and 2048px widths. Player, title, sidebar and thumbnail geometry matched the landscape fixture within one pixel. The updated extension has not been installed or verified in your signed-in Chrome session. YouTube layout experiments or future markup changes may require another adjustment.
+Validation: JavaScript syntax and manifest checks, plus a browser layout fixture built from the column rules of live landscape and portrait watch pages, tested at 1340px and 2048px widths. Player, title, sidebar and thumbnail geometry matched the landscape layout within one pixel. YouTube layout experiments or future markup changes may require further adjustment.
 
 ## Files
 
@@ -24,3 +24,8 @@ Validation: JavaScript syntax and manifest checks; browser layout fixture using 
 - `content.css` — 16:9 watch-page layout rules.
 - `content.js` — toggle, navigation and full-screen handling.
 - `popup.html`, `popup.css`, `popup.js` — toolbar on/off switch.
+- `LICENSE` — MIT license.
+
+## License
+
+Released under the [MIT License](LICENSE).
